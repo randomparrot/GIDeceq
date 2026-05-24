@@ -7,14 +7,31 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="soon-page" aria-label="Շուտով">
+    <main class="soon-page quiz-page" aria-label="Շուտով">
       <img class="scene-image" src="assets/gideceq-landing-composite.png" alt="">
       <div class="stone-vignette" aria-hidden="true"></div>
-      <section class="soon-scroll" aria-live="polite">
-        <h1>GIDeceq</h1>
-        <p>Շուտով...</p>
-        <a href="index.html">Վերադառնալ</a>
+      <video class="lesson-panel lesson-video" src="assets/try-out-lesson.mp4" controls playsinline></video>
+      <section class="quiz-scroll" aria-live="polite">
+        <button class="quiz-opener" type="button">Քվիզ</button>
+
+        <div class="quiz-card" aria-hidden="true">
+          <div class="quiz-card-header">
+            <h1>ՍՏՈՒԳԻՐ ՔԵԶ</h1>
+            <button class="quiz-close" type="button" aria-label="Փակել">Փակել</button>
+          </div>
+
+          <p class="quiz-counter">Հարց 1 / 3</p>
+          <h2 class="quiz-question"></h2>
+          <div class="quiz-options" role="group" aria-label="Պատասխաններ"></div>
+          <p class="quiz-feedback" aria-live="polite"></p>
+
+          <div class="quiz-actions">
+            <button class="quiz-next" type="button" disabled>Հաջորդ հարցը</button>
+            <button class="quiz-retry" type="button" hidden>Կրկին փորձել</button>
+          </div>
+        </div>
       </section>
+      <script src="qviz.js"></script>
     </main>
   </body>
 </html>
